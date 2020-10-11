@@ -37,8 +37,8 @@ console.log(animals); // [ 'monkey', 'dog', 'horse', 'lion', 'tiger' ]
 
 // remove elements from array
 // .pop() --> removes the last element
-// .shift()
-// .splice(index, howMany)
+// .shift() --> removes the first element
+// .splice(index, howMany) --> removes from the stated index number of stated elements, including the one on the index
 
 animals.pop();
 console.log(animals); // [ 'monkey', 'dog', 'horse', 'lion' ]
