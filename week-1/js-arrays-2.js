@@ -20,6 +20,9 @@ mixedArr.forEach(function (elem) {
 
 mixedArr.forEach(elem => console.log(elem));
 
+// ******************************************************************************************
+
+// to make a copy of an array, you can use
 // .concat()
 
 const fruits = ['banana', 'plum'];
@@ -49,3 +52,6 @@ const array2 = [4, 5, 6];
 const mergedArr = [...originalArr, ...array2];
 
 console.log(mergedArr); // [ 1, 2, 3, 4, 5, 6 ]
+
+// why we would make a copy of an array?
+// - because we want to preserve the original array and keep its original state and make all the changes in the copied array
