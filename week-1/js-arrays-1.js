@@ -1,4 +1,6 @@
-// arrays
+// ******************************************************************************************
+// PART 1 (DECLARATION, INDEX, ADD, REMOVE)
+// ******************************************************************************************
 
 // examples of arrays
 
@@ -12,7 +14,7 @@ console.log(firstElem);
 
 // length
 
-console.log(`The numer of elements in array: ${mixedArr.length}`); // 5
+console.log(`The number of elements in array: ${mixedArr.length}`); // 5
 
 // add elements to the array
 
