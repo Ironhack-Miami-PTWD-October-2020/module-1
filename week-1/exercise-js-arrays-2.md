@@ -1,3 +1,9 @@
+Use the given array and iterate over it:
+
+- using `for` loop
+- using `.forEach()` method and show the index of each element next to the element itself.
+
+```javascript
 const fruits = ['apple', 'plum', 'strawberries'];
 
 for (const elemOfArr of fruits) {
@@ -32,3 +38,4 @@ fruits.forEach(function (elem, index) {
 // strawberries ------> 2
 
 // fruits.forEach((elem, index) => console.log(`${elem} ------> ${index}`))
+```
