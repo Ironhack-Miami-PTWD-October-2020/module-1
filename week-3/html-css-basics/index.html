@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The HTML5 Breakfast Site</title>
+        <meta charset="UTF-8" />
+
+        <!-- You css link always at the bottom -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <nav>
+            <a href="#section1">Section 1</a>
+            <button><a href="#section2">Section 2</a></button>
+        </nav>
+
+        <!-- You should never have more than 1 h1 on your app -->
+
+        <h1>Breakfast Site</h1>
+        <h2>Breakfast Site</h2>
+        <h3>Breakfast Site</h3>
+        <h4>Breakfast Site</h4>
+        <h5>Breakfast Site</h5>
+        <h6>Breakfast Site</h6>
+
+        <aside>This is the aside</aside>
+
+        <p>This is a paragraph.</p>
+
+        <!-- span, i, b, strong are helper tags -->
+        <!-- br is used to break line segment -->
+
+        <span>This is the span</span>
+
+        <br />
+
+        <i>this is italic</i>
+
+        <br />
+
+        <b>This is a b tag which is the same as a strong tag</b>
+
+        <br />
+        <strong>This is a strong tag which is the same as a b tag</strong>
+
+        <br />
+
+        <hr />
+
+        <!-- never do inline styling, please I beg you, don't do it!!! -->
+        <p>
+            This is the <span style="color: red">Sentence</span> that has a span
+            inside of it
+        </p>
+
+        <div id="section1">
+            <h2>Kewl Lookin' Dragon Section</h2>
+            <!-- <img
+                src="https://cdn.conceptartempire.com/images/02/3827/04-stormfire-dragon.jpg"
+                alt="Fierce Dragon"
+                class="animate__animated animate__backInDown animate__1 1"
+            /> -->
+        </div>
+
+        <!-- div and section is the same thing, they are dividers that break up section on your html -->
+        <section id="section2">
+            <h2>This is the list section</h2>
+
+            <h3>Kewlest Reptiles</h3>
+            <ol>
+                <li class="animation">Komodo Dragon</li>
+                <li class="yellow-hurt-your-eyes-color">Black Mamba</li>
+                <li>Gecko</li>
+            </ol>
+
+            <hr />
+
+            <h3>Random Foods</h3>
+            <ul>
+                <li>Lasagna</li>
+                <li>Pizza</li>
+                <li class="yellow-hurt-your-eyes-color">Calzone</li>
+            </ul>
+        </section>
+
+        <form action="/auth/signup" method="POST">
+            <label
+                for="emailInput"
+                class="yellow-hurt-your-eyes-color large-font"
+                >Email:
+                <input
+                    id="emailInput"
+                    type="text"
+                    name="email"
+                    placeholder="johnsnow@gmail.com"
+                />
+            </label>
+
+            <button>Submit</button>
+        </form>
+
+        <div>
+            <h2>Table Section</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>Jose Perez</td>
+                    <td>Michael Smith</td>
+                    <td>Ariel Quinones</td>
+                </tr>
+                <tr>
+                    <th>Bootcamp</th>
+                    <td>FrontEnd WebDev</td>
+                    <td>FullStack WebDev</td>
+                    <td>MasterChef WebDev</td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td>Miami</td>
+                    <td>Madrid</td>
+                    <td>Barcelona</td>
+                </tr>
+            </table>
+        </div>
+
+        <footer></footer>
+
+        <!-- You script js is always at the bottom -->
+        <script src="./script.js"></script>
+    </body>
+</html>

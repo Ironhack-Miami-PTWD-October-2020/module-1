@@ -1,0 +1,101 @@
+@keyframes fontGrowth {
+    0% {
+        font-size: 1em;
+        width: 300%;
+    }
+
+    50% {
+        font-size: 2em;
+        width: 100%;
+    }
+
+    100% {
+        font-size: 3em;
+        width: 100%;
+    }
+}
+
+/* tag name selector don't have anything but the name of the tag for it */
+
+body {
+    /* background-color: blue; */
+}
+
+span {
+    color: yellow;
+    font-size: 3em;
+}
+
+span.red-color {
+    color: lime;
+}
+
+table {
+    border: 1px solid black;
+}
+
+table th {
+    border: 1px solid black;
+    text-align: left;
+}
+
+table td {
+    border: 1px solid black;
+}
+
+li.yellow-hurt-your-eyes-color {
+    color: rgba(0, 255, 0, 0.589);
+}
+
+ul li {
+    color: orange;
+    font-size: 2rem;
+}
+
+ul li.yellow-hurt-your-eyes-color {
+    color: rgba(212, 20, 20, 0.527);
+}
+
+img {
+    transition: width 5s ease-in-out 3s;
+}
+
+img:hover {
+    width: 90%;
+}
+
+a::after {
+    color: pink;
+}
+
+a:focus {
+    color: lime;
+}
+
+/* id are target by adding a # before the name of the id */
+/* id's should be unique (there should not be more than one id with the same name) */
+
+#section1 {
+    /* background-color: rgba(0, 255, 200, 0.787); */
+    background-image: url("https://cdn.conceptartempire.com/images/02/3827/04-stormfire-dragon.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 40vw;
+}
+
+/* classes are targeted by adding a . before the class name */
+
+.yellow-hurt-your-eyes-color {
+    color: yellow;
+
+    transition: ;
+}
+
+.large-font {
+    font-size: 3rem;
+}
+
+.animation {
+    animation: fontGrowth 5s normal 2;
+}
