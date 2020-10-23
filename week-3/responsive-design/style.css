@@ -1,0 +1,89 @@
+/* media query device standards as of June 2020 https://css-tricks.com/snippets/css/media-queries-for-standard-devices/ */
+
+/* Desktop Styling */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    height: 5vw;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: grey;
+}
+
+nav > img {
+    display: none;
+}
+
+.flex-between {
+    width: 100vw;
+    height: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-between div {
+    width: 28%;
+    height: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+img {
+    width: 80%;
+}
+
+/* Tablet Styling */
+
+@media only screen and (max-device-width: 768px) {
+    nav {
+        height: 10vw;
+    }
+
+    nav a {
+        font-size: 1.5em;
+    }
+}
+
+/* styling for IPhone X */
+
+/* for portrait and landscape use min width of device in portrait view and max width of device in landscape view */
+/* @media only screen and (min-device-width: 375px) and (max-device-width: 812px) */
+
+/* for portrait view manipulation for mobile only, use max width of mobile in portrait view */
+@media only screen and (max-device-width: 375px) {
+    nav {
+        height: 14vw;
+        justify-content: flex-start;
+    }
+
+    nav a {
+        display: none;
+    }
+
+    nav > img {
+        display: unset;
+        width: 15%;
+    }
+
+    .flex-between {
+        flex-direction: column;
+        height: 155vw;
+    }
+
+    .flex-between div {
+        width: 59%;
+        height: 32%;
+    }
+}
