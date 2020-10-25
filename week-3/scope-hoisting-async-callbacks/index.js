@@ -22,7 +22,6 @@ function evenOrOdd(num) {
 };
 
 
-
 // Shadowing is when you are trying to reuse a variable name within the scope of the newly declared variable
 const shadow = (myArray) => {
   // since myNum is already declared globally, this variable would considered a shadow of the globally scoped variable (try to avoid using shadow variable to avoid having issues later)
