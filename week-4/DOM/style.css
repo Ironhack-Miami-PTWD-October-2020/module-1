@@ -1,0 +1,13 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.doNotDisplay {
+    display: none;
+}

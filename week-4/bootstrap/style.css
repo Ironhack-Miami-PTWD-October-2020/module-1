@@ -1,0 +1,34 @@
+nav {
+    background-color: silver;
+    /* display: flex;
+    justify-content: space-between; */
+    padding: 0 5vw;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 101.1vw;
+    height: 4vw;
+}
+
+nav div.authNav {
+    width: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.checkMeOutButton {
+    color: lightblue;
+}
+
+.checkMeOutButton:hover {
+    color: black;
+}
+
+.myDropdown {
+    content: url("https://cdn0.iconfinder.com/data/icons/arrows-9/100/arrow-16-512.png");
+}
