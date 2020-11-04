@@ -11,9 +11,16 @@
     <body>
         <h1>Viking vs Saxons</h1>
 
-        <div id="gameBoard"></div>
+        <div class="scoreBoard">
+            <h3>Player: <span id="playerScore">0</span></h3>
+            <h3>Saxon: <span id="saxonScore">0</span></h3>
+        </div>
 
-        <button id="startGameButton">Start War</button>
+        <p id="textDisplay"></p>
+        <div class="center-content">
+            <button id="startGameButton">Start War</button>
+        </div>
+        <div id="gameBoard"></div>
 
         <script src="./src/viking.js" async defer></script>
         <script src="./script.js" async defer></script>

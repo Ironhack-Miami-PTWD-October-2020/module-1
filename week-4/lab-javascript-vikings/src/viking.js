@@ -67,21 +67,30 @@ class War {
         this.saxonArmy.push(saxon);
     }
 
-    vikingAttack() {
+    vikingAttack(theVikingIndex) {
         const randomSaxon = Math.floor(Math.random() * this.saxonArmy.length);
-        const randomViking = Math.floor(Math.random() * this.vikingArmy.length);
+        // const randomViking = Math.floor(Math.random() * this.vikingArmy.length);
+        const randomViking = theVikingIndex;
 
-        const theResultOfCombat = this.saxonArmy[randomSaxon]?.receiveDamage(
+        console.log("...>", {
+            saxon: this.saxonArmy[randomSaxon].health,
+        });
+
+        const theResultOfCombat = this.saxonArmy[randomSaxon].receiveDamage(
             this.vikingArmy[randomViking].attack()
         );
 
-        if (
-            this.saxonArmy[randomSaxon]?.health -
-                this.vikingArmy[randomViking].attack() <=
-            0
-        ) {
+        console.log({
+            saxon: this.saxonArmy[randomSaxon].health,
+            viking: this.vikingArmy[randomViking],
+        });
+
+        if (this.saxonArmy[randomSaxon].health <= 0) {
             this.saxonArmy.splice(randomSaxon, 1);
         }
+
+        console.log({ saxonArmySize: this.saxonArmy.length });
+        displayArmies();
 
         return theResultOfCombat;
     }
@@ -93,7 +102,7 @@ class War {
         // optional chaining for object and keys is when you add ? before the . when calling the key. object?.key
         // link to documentation about optional chaining.
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
-        const theResultOfCombat = this.vikingArmy[randomViking]?.receiveDamage(
+        const theResultOfCombat = this.vikingArmy[randomViking].receiveDamage(
             this.saxonArmy[randomSaxon].attack()
         );
 
@@ -104,13 +113,11 @@ class War {
         //         this.saxonArmy[randomSaxon].attack())
         // };
 
-        if (
-            this.vikingArmy[randomViking]?.health -
-                this.saxonArmy[randomSaxon].attack() <=
-            0
-        ) {
+        if (this.vikingArmy[randomViking].health <= 0) {
             this.vikingArmy.splice(randomViking, 1);
         }
+
+        displayArmies();
 
         return theResultOfCombat;
     }
