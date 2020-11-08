@@ -20,6 +20,7 @@ const person = {
   greet: function () {
     console.log('Hello');
   },
+
   getName: function () {
     // console.log(this)
     console.log(`Person's name is: ${this.name}`);
