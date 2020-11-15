@@ -1,7 +1,9 @@
 const canvas = document.getElementById('example-1');
 const context = canvas.getContext('2d');
 
+// ************************
 // draw rectangle
+// ************************
 
 function drawRect() {
   context.fillStyle = 'blue';
@@ -11,13 +13,19 @@ function drawRect() {
 context.fillStyle = 'rgba(50, 205, 50, 0.5)';
 context.fillRect(30, 40, 60, 60);
 
+// ************************
 // draw text
+// ************************
+
 context.fillStyle = 'pink';
 context.font = '15px monospace';
 
 context.fillText('PTWD 102020 ♥️', 160, 50);
 
+// ************************
 // draw path
+// ************************
+
 // step 1: beginPath()
 context.beginPath();
 
@@ -40,7 +48,10 @@ context.closePath();
 
 // formula to convert degrees into radians: radians = (Math.PI / 180) * degrees
 
+// ************************
 // draw circle
+// ************************
+
 // step 1: beginPath()
 context.beginPath();
 
@@ -59,6 +70,7 @@ context.stroke();
 // step 4: closePath()
 context.closePath();
 
+// inner smaller half circle
 context.strokeStyle = 'purple';
 context.beginPath();
 context.arc(150, 150, 30, 0, Math.PI);
