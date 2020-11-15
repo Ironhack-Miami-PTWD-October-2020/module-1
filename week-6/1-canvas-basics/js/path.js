@@ -46,11 +46,11 @@ context.fill();
 // step 5: closePath()
 context.closePath();
 
-// formula to convert degrees into radians: radians = (Math.PI / 180) * degrees
-
 // ************************
 // draw circle
 // ************************
+
+// formula to convert degrees into radians: radians = (Math.PI / 180) * degrees
 
 // step 1: beginPath()
 context.beginPath();
