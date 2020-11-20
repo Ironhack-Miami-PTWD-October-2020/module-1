@@ -2,6 +2,8 @@ const canvas = document.getElementById('my-canvas');
 const context = canvas.getContext('2d');
 
 let score = 0;
+let isOver = false;
+let lives = 3;
 
 // 1. set the background
 
@@ -15,6 +17,8 @@ const drawBackground = () => {
   context.font = '25px Arial';
 
   context.fillText(`Score: ${score}`, 800, 50);
+
+  context.fillText(`Lives: ${lives}`, 800, 90);
 };
 
 // 2. add images to canvas
@@ -23,7 +27,8 @@ const superman = {
   x: 0,
   y: 200,
   width: 150,
-  height: 150
+  height: 150,
+  immunity: false
 };
 
 // const { x, y, width, height } = superman;
@@ -54,7 +59,11 @@ const drawEverything = () => {
   context.drawImage(fireballImg, fireball.x, fireball.y, fireball.width, fireball.height);
 
   if (didCollide(superman, fireball)) {
-    alert('CRASHHHH');
+    // alert('CRASHHHH');
+
+    if (lives === 0) {
+      gameOver();
+    }
   }
 };
 
@@ -78,7 +87,9 @@ const drawingLoop = () => {
     score++;
   }
 
-  requestAnimationFrame(drawingLoop);
+  if (isOver === false) {
+    requestAnimationFrame(drawingLoop);
+  }
 };
 
 // player movements
@@ -106,6 +117,13 @@ document.addEventListener('keydown', event => {
   }
 });
 
+const switchImmunity = () => {
+  superman.immunity = true;
+  setTimeout(() => {
+    superman.immunity = false;
+  }, 1000);
+};
+
 // collision detection
 
 const didCollide = (superman, fireball) => {
@@ -124,11 +142,50 @@ const didCollide = (superman, fireball) => {
     superman.y + superman.height < fireball.y
   ) {
     return false;
+  } else {
+    if (!superman.immunity) {
+      lives -= 1;
+      switchImmunity();
+    }
+    return true;
   }
-
-  return true;
 };
 
 // 4. end the game
+
+const gameOver = () => {
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  // set the background
+  drawBackground();
+
+  // change the image to the tired superman one
+  // const tiredSupermanImg = new Image();
+  // tiredSupermanImg.src = './images/tired-superman.png';
+
+  const tiredSuperman = {
+    x: 400,
+    y: 300,
+    width: 150,
+    height: 150,
+    img: undefined
+  };
+
+  tiredSuperman.img = new Image();
+  tiredSuperman.img.src = './images/tired-superman.png';
+
+  tiredSuperman.img.addEventListener('load', () => {
+    context.drawImage(tiredSuperman.img, tiredSuperman.x, tiredSuperman.y, tiredSuperman.width, tiredSuperman.height);
+  });
+
+  // in a moment of a collision, update the state from false to true
+  isOver = true;
+
+  // put some text - GAME OVER
+  context.fillStyle = 'red';
+  context.font = '70px Arial';
+
+  context.fillText('GAME OVER!', 300, 200);
+};
 
 drawingLoop();
