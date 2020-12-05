@@ -23,3 +23,6 @@ console.log(favorites); // => [ 'react', 'express', 'node' ]
 // remove elements in the positions 2 and 3 and add 'mongodb'
 favorites.splice(1, 2, 'mongodb');
 console.log(favorites); // => [ 'react', 'mongodb' ]
+
+
+// adding a comment on seperate branch
