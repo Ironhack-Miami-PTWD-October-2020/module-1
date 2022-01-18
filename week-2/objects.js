@@ -51,6 +51,8 @@ student.isCareerChanger = false;
 
 console.log(student.isCareerChanger); // false
 
+console.log(student.favs.push('HTML'))
+
 
 // list the keys
 
